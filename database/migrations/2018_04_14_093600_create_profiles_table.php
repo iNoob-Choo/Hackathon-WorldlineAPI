@@ -21,6 +21,7 @@ class CreateProfilesTable extends Migration
             $table->integer('age');
             $table->string('address');
             $table->string('country');
+            $table->string('email');
             $table->timestamps();
         });
     }

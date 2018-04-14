@@ -17,5 +17,6 @@ class Profile extends Model
     'age',
     'address',
     'country',
+    'email',
   ];
 }
