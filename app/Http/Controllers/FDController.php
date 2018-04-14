@@ -10,7 +10,7 @@ class FDController extends Controller
 {
 	//Create a Fixed Deposit
     public function createFixedDeposit(Request $FDData){
-    	FixedDeposit $fd = new FixedDeposit();
+    	$fd = new FixedDeposit();
 
     	$fd->fill($FDData->all());
 
@@ -20,7 +20,7 @@ class FDController extends Controller
 
     //Update Fixed Deposit
     public function preCloseFixedDeposit(int $fd_id, Request $FDData){
-    	FixedDeposit $fd = FixedDeposit::findOrFail($fd_id);
+    	$fd = FixedDeposit::findOrFail($fd_id);
 
     	$fd->fill($FDData->all());
 
