@@ -21,4 +21,9 @@ class FixedDeposit extends Model
     'maturity_date',
     'interest_rate',
   ];
+
+  public function accounts()
+  {
+    return $this->belongsTo(Account::class);
+  }
 }

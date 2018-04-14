@@ -19,4 +19,9 @@ class Profile extends Model
     'country',
     'email',
   ];
+
+  public function accounts()
+  {
+    return $this->belongsTo(Account::class);
+  }
 }

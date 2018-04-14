@@ -15,4 +15,9 @@ class Bill extends Model
     'invoice_no',
     'invoice_summary',
   ];
+
+  public function payments()
+  {
+    return $this->hasOne(Payment::class);
+  }
 }
