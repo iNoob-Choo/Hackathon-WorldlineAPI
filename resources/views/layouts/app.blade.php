@@ -63,7 +63,6 @@
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
-                                    <li><a href="{{ route('settings') }}">Settings</a></li> 
                                 </ul>
                             </li>
                         @endguest

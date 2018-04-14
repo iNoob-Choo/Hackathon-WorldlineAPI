@@ -36,7 +36,6 @@ Route::post('/Accounts/Transactions', 'TransactionController@addTransaction');
 Route::get('/Accounts/Transactions/{account_id}', 'TransactionController@getTransaction'); 
 
 Route::get('/Accounts/Loans', 'LoanController@getLoanAccounts');
-
 Route::get('/Accounts/{account_id}', 'AccountController@getAccountSummary');
 
 Route::get('/Accounts', 'AccountController@getAllAccounts');

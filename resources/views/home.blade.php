@@ -1,27 +1,56 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+<!-- Bootstrap Boilerplate... -->
+ <div class="panel-body">
+ @if (count($users) > 0)
+<table class="table table-striped task-table">
 
-                <div class="panel-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-                    <div class="row">
-                        <ul>
-                          <li><a href="{{route('index.user')}}">View Admins</a></li>
-                          <li><a href="#"></a>View Something</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+ <!-- Table Headings -->
+   <thead>
+     <tr>
+       <th>No.</th>
+       <th>Name</th>
+     </tr>
+   </thead>
+
+ <!-- Table Body -->
+   <tbody>
+     @foreach ($users as $i => $user)
+     <tr>
+       <td class="table-text">
+         <div>{{ $i+1 }}</div>
+       </td>
+     <td class="table-text">
+       <div>
+        {{$user->name}}
+       </div>
+     </td>
+     <td class="table-text">
+       <div>
+       {!! link_to_route(
+       'edit.user',
+       $title = 'Edit',
+       $parameters = [
+       'id' => $user->id,
+
+       ]
+       ) !!}
+       </div>
+     </td>
+     </tr>
+     @endforeach
+   </tbody>
+</table>
+<div class="text-center">
+  {!! $users->links() !!}
 </div>
-@endsection
+<a href="{{route('create.user')}}" class="btn btn-primary">Create Admin</a>
+<a class="btn btn-danger "href="{{ URL::previous() }}">Go Back</a>
+   @else
+     <div>
+        <span>No Admins Created</span>
+     </div>
+   @endif
+   </div>
+   @endsection

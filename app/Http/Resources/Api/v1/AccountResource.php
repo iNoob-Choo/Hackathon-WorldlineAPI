@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Resources;
+namespace App\Http\Resources\Api\v1;
 
 use Illuminate\Http\Resources\Json\Resource;
 
@@ -26,6 +26,7 @@ class AccountResource extends Resource
           'min_balance' => $this->min_balance,
           'current_balance' => $this->current_balance,
           'available_balance' =>$this->available_balance,
+          'api-version' => 1,
         ];
     }
 }
