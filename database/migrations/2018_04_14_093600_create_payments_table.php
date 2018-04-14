@@ -20,7 +20,15 @@ class CreatePaymentsTable extends Migration
             $table->date('payment_date');
             $table->string('payment_no');
             $table->string('payment_detail');
+            $table->unsignedInteger('transaction_id')->unique();
+            $table->unsignedInteger('bill_id')->unique();
+
             $table->timestamps();
+            $table->foreign('transaction_id')
+                ->references('id')->on('transactions');
+
+            $table->foreign('bill_id')
+                ->references('id')->on('bills');
         });
     }
 

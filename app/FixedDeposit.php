@@ -20,6 +20,7 @@ class FixedDeposit extends Model
     'current_balance',
     'maturity_date',
     'interest_rate',
+    'account_id'
   ];
 
       /*

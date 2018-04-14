@@ -15,6 +15,7 @@ class Transaction extends Model
     'description',
     'debit_amount',
     'credit_amount',
+    'account_id'
   ];
 
       /*
@@ -25,5 +26,9 @@ class Transaction extends Model
   public function payments()
   {
     return $this->belongsTo(Payment::class);
+  }
+
+  public function accounts(){
+    return $this->belongsTo(Account::class);
   }
 }

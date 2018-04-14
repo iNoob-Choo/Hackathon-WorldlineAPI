@@ -29,10 +29,9 @@ class PayeeController extends Controller
     }
 
     public function deletePayee($payee_id){
-        $payee = Payment::findOrFail($payee_id);
-
+        $payee = Payee::findOrFail($payee_id);
         if($payee->delete()){
-        	return new PaymentResource($payee);
+        	return new PayeeResource($payee);
         }
     }
 }

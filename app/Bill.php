@@ -14,6 +14,8 @@ class Bill extends Model
     'account_no',
     'invoice_no',
     'invoice_summary',
+    'invoice_date',
+    'account_id'
   ];
 
       /*

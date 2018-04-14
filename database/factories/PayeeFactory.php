@@ -8,6 +8,6 @@ $factory->define(App\Payee::class, function (Faker $faker) {
         'payee_detail'=>$faker->text(10),
         'payee_no'=>$faker->numberBetween($min = 1, $max = 10),
         'payee_account_no'=>$faker->numberBetween($min = 1, $max = 10),
-        'account_id'=>$faker->numberBetween($min = 1, $max = 10),
+        'account_id'=>$faker->numberBetween($min = 1, $max = 3),
     ];
 });

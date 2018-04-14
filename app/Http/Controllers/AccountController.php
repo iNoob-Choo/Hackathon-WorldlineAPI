@@ -11,7 +11,7 @@ class AccountController extends Controller
 {
 
     // Obtain one Account
-    public function getAccountSummary(int $account_id){
+    public function getAccountSummary($account_id){
         $account = Account::findOrFail($account_id);
 
         return new AccountResource($account);

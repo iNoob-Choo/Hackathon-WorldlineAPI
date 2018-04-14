@@ -14,12 +14,13 @@ class DatabaseSeeder extends Seeder
         $this->call([
           ProfileTableSeeder::class,
           AccountTableSeeder::class,
-          PaymentTableSeeder::class,
           BillTableSeeder::class,
+          TransactionTableSeeder::class,
+          PaymentTableSeeder::class,
           LoanTableSeeder::class,
           FixedDepositTableSeeder::class,
           PayeeTableSeeder::class,
-          TransactionTableSeeder::class,
+          
         ]);
     }
 }

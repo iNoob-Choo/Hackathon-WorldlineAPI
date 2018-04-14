@@ -15,6 +15,8 @@ class Payment extends Model
     'payment_date',
     'payment_no',
     'payment_detail',
+    'bill_id',
+    'transaction_id'
   ];
 
       /*

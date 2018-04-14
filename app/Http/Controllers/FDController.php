@@ -19,7 +19,7 @@ class FDController extends Controller
     }
 
     //Update Fixed Deposit
-    public function preCloseFixedDeposit(int $fd_id, Request $FDData){
+    public function preCloseFixedDeposit($fd_id, Request $FDData){
     	$fd = FixedDeposit::findOrFail($fd_id);
 
     	$fd->fill($FDData->all());

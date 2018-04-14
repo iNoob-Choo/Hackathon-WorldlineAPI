@@ -15,6 +15,7 @@ class Payee extends Model
     'payee_no',
     'payee_detail',
     'payee_account_no',
+    'account_id'
   ];
 
       /*

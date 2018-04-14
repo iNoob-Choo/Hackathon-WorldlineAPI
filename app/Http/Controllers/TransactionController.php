@@ -8,28 +8,31 @@ use App\Http\Resources\TransactionResource;
 
 class TransactionController extends Controller
 {
-    public function getAllTransactions(){
-    	$transactions = Transaction::paginate(30);
-
-    	return TransactionResource::collection($transactions);
-    }
+    
 
     public function addTransaction(Request $TransactionData){
     	$transaction = new Transaction();
 
     	$transaction->fill($TransactionData->all());
 
-    	if($transaction->save())
+    	if($transaction->save()){
     		return new TransactionResource($transaction);
+        }
 
     }
 
     public function getTransaction($account_id){
-        $transaction = Transaction::findOrFail($account_id);
+        $transactions = Transaction::where('account_id', $account_id)->get();
 
-        $transaction->fill($TransactionData->all());
+        return TransactionResource::collection($transactions);
+    
+    }
 
-        if($transaction->save())
-        	return new TransactionResource($transaction);
+    public function getAllTransactions(){
+        $transactions = Transaction::paginate(30);
+
+        return TransactionResource::collection($transactions);
     }
 }
+
+?>

@@ -13,6 +13,6 @@ $factory->define(App\FixedDeposit::class, function (Faker $faker) {
         'available_balance' => $faker->numberBetween($min = 1000, $max = 9000),
         'maturity_date' => $faker->dateTimeBetween($startDate = "now", $endDate = "30 days"),
         'interest_rate' =>$faker->numberBetween($min = 1, $max = 30),
-        'account_id' =>$faker->numberBetween($min = 1, $max = 10),
+        'account_id' =>$faker->numberBetween($min = 1, $max = 3),
     ];
 });

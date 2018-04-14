@@ -1,4 +1,4 @@
-,<?php
+<?php
 
 namespace App\Http\Resources;
 
@@ -20,10 +20,10 @@ class TransactionResource extends Resource
         */
         return[
         
-        'id' => $this->id,
-        'description' => $this->description,
-        'debit_amount' => $this->debit_amount,
-        'credit_amount' => $this->credit_amount,
-         ];
+            'id' => $this->id,
+            'description' => $this->description,
+            'debit_amount' => $this->debit_amount,
+            'credit_amount' => $this->credit_amount,
+        ];
     }
 }

@@ -29,11 +29,11 @@
      <td class="table-text">
        <div>
        {!! link_to_route(
-       'delete.user',
-       $title = 'Delete',
+       'edit.user',
+       $title = 'Edit',
        $parameters = [
        'id' => $user->id,
-       'class'=>'btn btn-warning'
+
        ]
        ) !!}
        </div>
