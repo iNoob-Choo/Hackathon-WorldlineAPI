@@ -12,6 +12,10 @@ class LoanController extends Controller
     public function getLoanAccounts(){
 		$loans = Loan::paginate(30);
 
-        return AccountResource::collection($loans);
+		echo "sheit";
+
+        return LoanResource::collection($loans);
     }
 }
+
+?>

@@ -29,9 +29,15 @@ Route::get('/Accounts/Profiles/{profile_id}', 'ProfileController@getAccountHolde
 
 Route::put('/Accounts/Profiles/{profile_id}', 'ProfileController@updateAccountHolderProfile');
 
-Route::get('/Accounts/{account_id}', 'AccountController@getAccountSummary');
+Route::get('/Accounts/Transactions', 'TransactionController@getAllTransactions');
+
+Route::post('/Accounts/Transactions', 'TransactionController@addTransaction');
+
+Route::get('/Accounts/Transactions/{account_id}', 'TransactionController@getTransaction'); 
 
 Route::get('/Accounts/Loans', 'LoanController@getLoanAccounts');
+
+Route::get('/Accounts/{account_id}', 'AccountController@getAccountSummary');
 
 Route::get('/Accounts', 'AccountController@getAllAccounts');
 
@@ -49,8 +55,3 @@ Route::post('/Accounts/fd', 'FDController@createFixedDeposit');
 
 Route::put('/Accounts/fd/{fd_id}', 'FDController@preCloseFixedDeposit');
 
-Route::get('/Accounts/Transactions', 'TransactionController@getAllTransactions');
-
-Route::post('/Accounts/Transactions', 'TransactionController@addTransaction');
-
-Route::get('/Accounts/Transaction/{account_id}', 'TransactionController@getTransaction'); 
