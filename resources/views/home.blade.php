@@ -14,9 +14,9 @@
                         </div>
                     @endif
                     <div class="row">
-                        <ul>
-                          <li><a href="{{route('index.user')}}">View Admins</a></li>
-                          <li><a href="#"></a>View Something</li>
+                        <ul class="no-bullets">
+                          <li><a  class="btn btn-primary btn-block" href="{{route('index.user')}}">View Admins</a></li>
+                          <li><a  class="btn btn-primary btn-block " href="{{ route('settings') }}">Settings</a></li>
                         </ul>
                     </div>
                 </div>

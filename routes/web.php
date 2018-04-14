@@ -17,4 +17,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/create','HomeController@createUser')->name('create.user');
 Route::get('/user','HomeController@viewAllUser')->name('index.user');
 Route::get('/user/{user}','HomeController@editUser')->name('edit.user');
- Route::get('/settings', 'SettingsController@index')->name('settings');
+Route::get('/settings', 'SettingsController@index')->name('settings');
+Route::delete('/user/{user}','HomeController@deleteUser')->name('delete.user');
