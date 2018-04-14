@@ -19,11 +19,11 @@ class BillResource extends Resource
         * Return the data needed to be shown only
         */
         return[
-          'id' => $this->id;
-          'account_no' => $this->id;
-          'invoice_date' => $this->invoice_date;
-          'invoice_no' => $this->invoice_no;
-          'invoice_summary' =>$this->invoice_summary;
+          'id' => $this->id,
+          'account_no' => $this->id,
+          'invoice_date' => $this->invoice_date,
+          'invoice_no' => $this->invoice_no,
+          'invoice_summary' =>$this->invoice_summary,
         ];
     }
 }

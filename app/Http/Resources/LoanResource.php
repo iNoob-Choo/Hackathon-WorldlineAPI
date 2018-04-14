@@ -19,9 +19,9 @@ class LoanResource extends Resource
         * Return the data needed to be shown only
         */
         return[
-          'id' => $this->id;
-          'loan_amount' => $this->loan_amount;
-          'loan_type' => $this->loan_type;
+          'id' => $this->id,
+          'loan_amount' => $this->loan_amount,
+          'loan_type' => $this->loan_type,
         ];
     }
 }

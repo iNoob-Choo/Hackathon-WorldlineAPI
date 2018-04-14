@@ -19,13 +19,13 @@ class AccountResource extends Resource
         * Return the data needed to be shown only
         */
         return[
-          'id' => $this->id;
-          'account_type' => $this->account_type;
-          'account_no' => $this->account_no;
-          'currency' => $this->currency;
-          'min_balance' => $this->min_balance;
-          'current_balance' => $this->current_balance;
-          'available_balance' =>$this->available_balance;
+          'id' => $this->id,
+          'account_type' => $this->account_type,
+          'account_no' => $this->account_no,
+          'currency' => $this->currency,
+          'min_balance' => $this->min_balance,
+          'current_balance' => $this->current_balance,
+          'available_balance' =>$this->available_balance,
         ];
     }
 }

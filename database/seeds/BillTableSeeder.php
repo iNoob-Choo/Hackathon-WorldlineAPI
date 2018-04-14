@@ -11,6 +11,6 @@ class BillTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        factory(App\Bill::class, 10)->create();
     }
 }

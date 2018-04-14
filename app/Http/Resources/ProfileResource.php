@@ -19,13 +19,13 @@ class ProfileResource extends Resource
         * Return the data needed to be shown only
         */
         return[
-          'id' => $this->id;
-          'gender' => $this->gender;
-          'last_name' => $this->last_name;
-          'first_name' => $this->first_name;
-          'age' => $this->age;
-          'address' => $this->address;
-          'coutry' => $this->country;
+          'id' => $this->id,
+          'gender' => $this->gender,
+          'last_name' => $this->last_name,
+          'first_name' => $this->first_name,
+          'age' => $this->age,
+          'address' => $this->address,
+          'coutry' => $this->country,
         ];
     }
 }

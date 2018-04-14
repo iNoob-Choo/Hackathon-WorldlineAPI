@@ -18,14 +18,16 @@ class FDResource extends Resource
         /*
         * Return the data needed to be shown only
         */
-        'id' => $this->id;
-        'balance' => $this->balance;
-        'tenure_duration' => $this->tenure_duration;
-        'account_type' => $this->account_type;
-        'currency' => $this->currency;
-        'available_balance' => $this->available_balance;
-        'current_balance' => $this->current_balance;
-        'maturity_date' => $this->maturity_date;
-        'interest_rate' => $this->interest_rate;
+        return[
+        'id' => $this->id,
+        'balance' => $this->balance,
+        'tenure_duration' => $this->tenure_duration,
+        'account_type' => $this->account_type,
+        'currency' => $this->currency,
+        'available_balance' => $this->available_balance,
+        'current_balance' => $this->current_balance,
+        'maturity_date' => $this->maturity_date,
+        'interest_rate' => $this->interest_rate,
+         ];
     }
 }

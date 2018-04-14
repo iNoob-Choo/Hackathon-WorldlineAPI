@@ -22,3 +22,35 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::middleware('auth:api')->get('/todos', function (Request $request) {
         return $request->user()->todos;
 });
+
+Route::post('/Accounts/Profiles', 'ProfileController@createAccountHolderProfile');
+
+Route::get('/Accounts/Profiles/{profile_id}', 'ProfileController@getAccountHolderProfile');
+
+Route::put('/Accounts/Profiles/{profile_id}', 'ProfileController@updateAccountHolderProfile');
+
+Route::get('/Accounts/{account_id}', 'AccountController@getAccountSummary');
+
+Route::get('/Accounts/Loans', 'LoanController@getLoanAccounts');
+
+Route::get('/Accounts', 'AccountController@getAllAccounts');
+
+Route::post('/Accounts/Bills', 'BillController@billPayment');
+
+Route::delete('/Accounts/Payments/{payment_id}', 'PaymentController@cancelPayment');
+
+Route::post('/Accounts/Payee', 'PayeeController@addPayee');
+
+Route::put('/Accounts/Payee/{payee_id}', 'PayeeController@updatePayee');
+
+Route::delete('/Accounts/Payee/{payee_id}', 'PayeeController@deletePayee');
+
+Route::post('/Accounts/fd', 'FDController@createFixedDeposit');
+
+Route::put('/Accounts/fd/{fd_id}', 'FDController@preCloseFixedDeposit');
+
+Route::get('/Accounts/Transactions', 'TransactionController@getAllTransactions');
+
+Route::post('/Accounts/Transactions', 'TransactionController@addTransaction');
+
+Route::get('/Accounts/Transaction/{account_id}', 'TransactionController@getTransaction'); 

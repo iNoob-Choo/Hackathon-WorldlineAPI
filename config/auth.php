@@ -42,7 +42,8 @@ return [
         ],
 
         'api' => [
-            'driver' => 'passport',
+            'driver' => 'web',
+            //'driver' => 'passport',
             'provider' => 'users',
         ],
     ],

@@ -11,6 +11,6 @@ class FixedDepositTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        factory(App\FixedDeposit::class, 10)->create();
     }
 }

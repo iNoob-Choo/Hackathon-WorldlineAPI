@@ -11,6 +11,6 @@ class PayeeTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        factory(App\Payee::class, 10)->create();
     }
 }

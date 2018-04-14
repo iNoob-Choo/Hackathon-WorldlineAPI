@@ -1,4 +1,4 @@
-<?php
+,<?php
 
 namespace App\Http\Resources;
 
@@ -19,10 +19,10 @@ class PayeeResource extends Resource
       * Return the data needed to be shown only
       */
       return[
-        'id' => $this->id;
-        'payee_name' => $this->payee_name;
-        'payee_no' => $this->payee_no;
-        'payee_account_no' => $this->payee_account_no;
+        'id' => $this->id,
+        'payee_name' => $this->payee_name,
+        'payee_no' => $this->payee_no,
+        'payee_account_no' => $this->payee_account_no,
       ];
     }
 }
