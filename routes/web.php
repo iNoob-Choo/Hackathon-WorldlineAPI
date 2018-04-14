@@ -19,3 +19,4 @@ Route::get('/user','HomeController@viewAllUser')->name('index.user');
 Route::get('/user/{user}','HomeController@editUser')->name('edit.user');
 Route::get('/settings', 'SettingsController@index')->name('settings');
 Route::delete('/user/{user}','HomeController@deleteUser')->name('delete.user');
+Route::get('/apistatus','HomeController@apistatus')->name('api.status');

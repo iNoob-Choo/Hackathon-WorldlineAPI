@@ -45,4 +45,9 @@ class HomeController extends Controller
       $user = User::find($id);
       $user->delete();
     }
+
+    public function apistatus()
+    {
+      return view('admin.apistatus');
+    }
 }
