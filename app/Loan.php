@@ -10,6 +10,7 @@ class Loan extends Model
   *   Mass Assignable Attribute
   **/
   protected $fillable = [
+    'id',
     'loan_amount',
     'loan_type',
   ];

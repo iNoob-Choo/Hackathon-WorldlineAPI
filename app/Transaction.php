@@ -10,6 +10,7 @@ class Transaction extends Model
   *   Mass Assignable Attribute
   **/
   protected $fillable = [
+    'id',
     'transaction_date',
     'description',
     'debit_amount',
