@@ -38,4 +38,9 @@ class Account extends Model
     {
       return $this->hasMany(Payee::class);
     }
+
+    public function bills()
+    {
+      return $this->hasMany(Bill::class);
+    }
 }
