@@ -21,7 +21,7 @@ class CreateFixedDepositsTable extends Migration
             $table->integer('tenure_duration');
             $table->char('currency',3);
             $table->float('current_balance');
-            $table->flaot('available_balance');
+            $table->float('available_balance');
             $table->date('maturity_date');
             $table->float('interest_rate');
             $table->timestamps();

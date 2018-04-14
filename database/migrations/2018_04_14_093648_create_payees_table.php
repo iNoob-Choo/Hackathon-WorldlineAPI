@@ -18,7 +18,7 @@ class CreatePayeesTable extends Migration
             $table->string('payee_name');
             $table->string('payee_detail');
             $table->string('payee_no');
-            $table->string('payee_account_no')
+            $table->string('payee_account_no');
             $table->timestamps();
         });
     }
