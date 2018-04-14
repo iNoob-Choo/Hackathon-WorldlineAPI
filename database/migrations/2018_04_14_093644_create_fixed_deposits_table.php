@@ -14,6 +14,7 @@ class CreateFixedDepositsTable extends Migration
     public function up()
     {
         Schema::create('fixed_deposits', function (Blueprint $table) {
+            $table->engine="InnoDB";
             $table->increments('id');
             $table->string('account_no');
             $table->string('account_type');
@@ -24,7 +25,11 @@ class CreateFixedDepositsTable extends Migration
             $table->float('available_balance');
             $table->date('maturity_date');
             $table->float('interest_rate');
+            $table->unsignedInteger('account_id');
             $table->timestamps();
+
+            $table->foreign('account_id')
+                      ->references('id')->on('accounts');
         });
     }
 

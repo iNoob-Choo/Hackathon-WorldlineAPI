@@ -18,4 +18,24 @@ class Account extends Model
       'current_balance',
       'available_balance',
     ];
+
+    public function profiles()
+    {
+      return $this->hasOne(Profile::class);
+    }
+
+    public function fixeddeposits()
+    {
+      return $this->hasOne(FixedDeposit::class);
+    }
+
+    public function loans()
+    {
+      return $this->hasMany(Loan::class);
+    }
+
+    public function payees()
+    {
+      return $this->hasMany(Payee::class);
+    }
 }

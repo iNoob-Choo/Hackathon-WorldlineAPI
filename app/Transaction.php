@@ -16,4 +16,9 @@ class Transaction extends Model
     'debit_amount',
     'credit_amount',
   ];
+
+  public function payments()
+  {
+    return $this->belongsTo(Payment::class);
+  }
 }

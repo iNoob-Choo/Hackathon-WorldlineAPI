@@ -14,4 +14,9 @@ class Loan extends Model
     'loan_amount',
     'loan_type',
   ];
+
+  public function accounts()
+  {
+    return $this->belongsTo(Account::class);
+  }
 }

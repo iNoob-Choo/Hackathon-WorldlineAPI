@@ -14,6 +14,7 @@ class CreateAccountsTable extends Migration
     public function up()
     {
         Schema::create('accounts', function (Blueprint $table) {
+            $table->engine="InnoDB";
             $table->increments('id');
             $table->string('account_type');
             $table->string('account_no');
@@ -21,7 +22,11 @@ class CreateAccountsTable extends Migration
             $table->float('min_balance');
             $table->float('current_balance');
             $table->float('available_balance');
+            $table->unsignedInteger('profile_id');
             $table->timestamps();
+
+            $table->foreign('profile_id')
+                    ->references('id')->on('profiles');
         });
     }
 

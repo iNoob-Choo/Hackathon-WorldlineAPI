@@ -16,4 +16,9 @@ class Payment extends Model
     'payment_no',
     'payment_detail',
   ];
+
+  public function bills()
+  {
+    return $this->belongsTo(Bill::class);
+  }
 }

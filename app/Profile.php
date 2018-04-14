@@ -17,5 +17,11 @@ class Profile extends Model
     'age',
     'address',
     'country',
+    'email',
   ];
+
+  public function accounts()
+  {
+    return $this->belongsTo(Account::class);
+  }
 }

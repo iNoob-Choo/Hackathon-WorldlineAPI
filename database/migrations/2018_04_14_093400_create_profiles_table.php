@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLoansTable extends Migration
+class CreateProfilesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,17 @@ class CreateLoansTable extends Migration
      */
     public function up()
     {
-        Schema::create('loans', function (Blueprint $table) {
+        Schema::create('profiles', function (Blueprint $table) {
             $table->engine="InnoDB";
             $table->increments('id');
-            $table->float('loan_amount');
-            $table->string('loan_type');
-            $table->unsignedInteger('account_id');
+            $table->char('gender',1);
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->integer('age');
+            $table->string('address');
+            $table->string('country');
+            $table->string('email');
             $table->timestamps();
-
-            $table->foreign('account_id')
-                      ->references('id')->on('accounts');
         });
     }
 
@@ -33,6 +34,6 @@ class CreateLoansTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('loans');
+        Schema::dropIfExists('profiles');
     }
 }
