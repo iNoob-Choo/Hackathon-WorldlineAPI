@@ -17,6 +17,11 @@ class Payment extends Model
     'payment_detail',
   ];
 
+      /*
+      * Relationship Declaration
+      *
+      *
+      */
   public function bills()
   {
     return $this->belongsTo(Bill::class);

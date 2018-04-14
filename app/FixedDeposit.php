@@ -22,6 +22,11 @@ class FixedDeposit extends Model
     'interest_rate',
   ];
 
+      /*
+      * Relationship Declaration
+      *
+      *
+      */
   public function accounts()
   {
     return $this->belongsTo(Account::class);

@@ -16,8 +16,18 @@ class Bill extends Model
     'invoice_summary',
   ];
 
+      /*
+      * Relationship Declaration
+      *
+      *
+      */
   public function payments()
   {
     return $this->hasOne(Payment::class);
+  }
+
+  public function accounts()
+  {
+    return $this->belongsTo(Account::class);
   }
 }

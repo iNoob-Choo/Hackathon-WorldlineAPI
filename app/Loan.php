@@ -15,6 +15,11 @@ class Loan extends Model
     'loan_type',
   ];
 
+      /*
+      * Relationship Declaration
+      *
+      *
+      */
   public function accounts()
   {
     return $this->belongsTo(Account::class);

@@ -19,6 +19,13 @@ class Account extends Model
       'available_balance',
     ];
 
+
+    /*
+    * Relationship Declaration
+    *
+    *
+    */
+
     public function profiles()
     {
       return $this->hasOne(Profile::class);
@@ -37,5 +44,10 @@ class Account extends Model
     public function payees()
     {
       return $this->hasMany(Payee::class);
+    }
+
+    public function bills()
+    {
+      return $this->hasMany(Bill::class);
     }
 }

@@ -21,11 +21,13 @@ class CreateBillsTable extends Migration
             $table->date('invoice_date');
             $table->string('invoice_summary');
             $table->unsignedInteger('payment_id');
+            $table->unsignedInteger('account_id');
             $table->timestamps();
 
             $table->foreign('payment_id')
                       ->references('id')->on('payments');
-
+            $table->foreign('account_id')
+                      ->references('id')->on('accounts');
         });
     }
 

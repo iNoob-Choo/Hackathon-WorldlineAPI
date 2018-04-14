@@ -20,6 +20,11 @@ class Profile extends Model
     'email',
   ];
 
+      /*
+      * Relationship Declaration
+      *
+      *
+      */
   public function accounts()
   {
     return $this->belongsTo(Account::class);

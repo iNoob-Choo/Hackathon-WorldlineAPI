@@ -17,6 +17,11 @@ class Payee extends Model
     'payee_account_no',
   ];
 
+      /*
+      * Relationship Declaration
+      *
+      *
+      */
   public function accounts()
   {
     return $this->belongsTo(Account::class);
