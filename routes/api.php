@@ -16,3 +16,9 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+/*TEST OAuth2*/
+Route::middleware('auth:api')->get('/todos', function (Request $request) {
+        return $request->user()->todos;
+});
