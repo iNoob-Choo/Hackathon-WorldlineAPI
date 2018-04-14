@@ -10,7 +10,10 @@ class Payee extends Model
   *   Mass Assignable Attribute
   **/
   protected $fillable = [
-    'loan_amount',
-    'loan_type',
+    'id',
+    'payee_name',
+    'payee_no',
+    'payee_detail',
+    'payee_account_no',
   ];
 }

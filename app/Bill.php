@@ -10,12 +10,8 @@ class Bill extends Model
   *   Mass Assignable Attribute
   **/
   protected $fillable = [
-    'id',
-    'gender',
-    'first_name',
-    'last_name',
-    'age',
-    'address',
-    'country',    
+    'account_no',
+    'invoice_no',
+    'invoice_summary',
   ];
 }

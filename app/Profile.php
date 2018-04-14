@@ -11,8 +11,11 @@ class Profile extends Model
   **/
   protected $fillable = [
     'id',
-    'payee_name',
-    'payee_no',
-    'payee_detail',
+    'gender',
+    'first_name',
+    'last_name',
+    'age',
+    'address',
+    'country',
   ];
 }

@@ -23,7 +23,7 @@ class CreateFixedDepositsTable extends Migration
             $table->float('current_balance');
             $table->flaot('available_balance');
             $table->date('maturity_date');
-            $table->float('investment_rate');
+            $table->float('interest_rate');
             $table->timestamps();
         });
     }
