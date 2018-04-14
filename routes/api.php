@@ -33,7 +33,9 @@ Route::get('/Accounts/{account_id}', 'AccountController@getAccountSummary');
 
 Route::get('/Accounts/Loans', 'LoanController@getLoanAccounts');
 
-Route::get('/Accounts', 'AccountController@getAllAccounts');
+Route::get('v1/Accounts', 'AccountController@getAllAccounts');
+
+Route::get('v2/Accounts', 'AccountController@getAllAccountsv2');
 
 Route::post('/Accounts/Bills', 'BillController@billPayment');
 
@@ -53,4 +55,4 @@ Route::get('/Accounts/Transactions', 'TransactionController@getAllTransactions')
 
 Route::post('/Accounts/Transactions', 'TransactionController@addTransaction');
 
-Route::get('/Accounts/Transaction/{account_id}', 'TransactionController@getTransaction'); 
+Route::get('/Accounts/Transaction/{account_id}', 'TransactionController@getTransaction');
