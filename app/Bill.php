@@ -16,6 +16,11 @@ class Bill extends Model
     'invoice_summary',
   ];
 
+      /*
+      * Relationship Declaration
+      *
+      *
+      */
   public function payments()
   {
     return $this->hasOne(Payment::class);

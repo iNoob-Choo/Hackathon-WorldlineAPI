@@ -15,6 +15,9 @@ class FDResource extends Resource
     public function toArray($request)
     {
         //return parent::toArray($request);
+        /*
+        * Return the data needed to be shown only
+        */
         'id' => $this->id;
         'balance' => $this->balance;
         'tenure_duration' => $this->tenure_duration;

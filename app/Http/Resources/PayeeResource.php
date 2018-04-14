@@ -15,6 +15,9 @@ class PayeeResource extends Resource
     public function toArray($request)
     {
       //  return parent::toArray($request);
+      /*
+      * Return the data needed to be shown only
+      */
       return[
         'id' => $this->id;
         'payee_name' => $this->payee_name;

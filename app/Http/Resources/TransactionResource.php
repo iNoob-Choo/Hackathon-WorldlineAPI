@@ -15,6 +15,9 @@ class TransactionResource extends Resource
     public function toArray($request)
     {
         //return parent::toArray($request);
+        /*
+        * Return the data needed to be shown only
+        */
         'id' => $this->id;
         'description' => $this->description;
         'debit_amount' => $this->debit_amount;

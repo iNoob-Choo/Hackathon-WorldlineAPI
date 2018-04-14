@@ -19,6 +19,13 @@ class Account extends Model
       'available_balance',
     ];
 
+
+    /*
+    * Relationship Declaration
+    *
+    *
+    */
+
     public function profiles()
     {
       return $this->hasOne(Profile::class);

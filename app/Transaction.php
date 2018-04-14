@@ -17,6 +17,11 @@ class Transaction extends Model
     'credit_amount',
   ];
 
+      /*
+      * Relationship Declaration
+      *
+      *
+      */
   public function payments()
   {
     return $this->belongsTo(Payment::class);
