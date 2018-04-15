@@ -17,6 +17,7 @@
                         <ul class="no-bullets">
                           <li><a  class="btn btn-primary btn-block" href="{{route('index.user')}}">View Admins</a></li>
                           <li><a  class="btn btn-primary btn-block " href="{{ route('settings') }}">Settings</a></li>
+                          <li><a  class="btn btn-primary btn-block " href="{{ route('api.status') }}">View API Status</a></li>
                         </ul>
                     </div>
                 </div>

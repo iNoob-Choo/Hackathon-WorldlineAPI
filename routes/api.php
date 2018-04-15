@@ -58,6 +58,6 @@ Route::put('/Accounts/fd/{fd_id}', 'FDController@preCloseFixedDeposit');
 Route::get('v1/Accounts', 'AccountController@getAllAccounts');
 Route::get('v2/Accounts', 'AccountController@getAllAccountsv2');
 
-Route::middleware(['auth:api'])->group(function () {
-  Route::get('v2/Accounts', 'AccountController@getAllAccountsv2');
-});
+// Route::middleware(['auth:api'])->group(function () {
+//   Route::get('v2/Accounts', 'AccountController@getAllAccountsv2');
+// });

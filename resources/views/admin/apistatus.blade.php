@@ -36,7 +36,7 @@
        </tr>
        <tr>
          <td>/api/Accounts/Bills</td>
-         <td>GET</td>
+         <td>POST</td>
          <td id="url5"></td>
        </tr>
        <tr>
@@ -102,7 +102,7 @@
     });
     $.ajax({
         url: "/api/Accounts/Bills",
-        type: "GET",
+        type: "POST",
         data: {
             //Set an empty response to see the error
             xml: "<response></response>"
