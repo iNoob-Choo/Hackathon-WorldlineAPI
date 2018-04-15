@@ -33,7 +33,7 @@ Route::get('/Accounts/Transactions', 'TransactionController@getAllTransactions')
 
 Route::post('/Accounts/Transactions', 'TransactionController@addTransaction');
 
-Route::get('/Accounts/Transactions/{account_id}', 'TransactionController@getTransaction'); 
+Route::get('/Accounts/Transactions/{account_id}', 'TransactionController@getTransaction');
 
 Route::get('/Accounts/Loans', 'LoanController@getLoanAccounts');
 Route::get('/Accounts/{account_id}', 'AccountController@getAccountSummary');
@@ -54,3 +54,10 @@ Route::post('/Accounts/fd', 'FDController@createFixedDeposit');
 
 Route::put('/Accounts/fd/{fd_id}', 'FDController@preCloseFixedDeposit');
 
+/*VERSIONING*/
+Route::get('v1/Accounts', 'AccountController@getAllAccounts');
+Route::get('v2/Accounts', 'AccountController@getAllAccountsv2');
+
+Route::middleware(['auth:api'])->group(function () {
+  Route::get('v2/Accounts', 'AccountController@getAllAccountsv2');
+});
