@@ -29,8 +29,8 @@
      <td class="table-text">
        <div>
        {!! link_to_route(
-       'edit.user',
-       $title = 'Edit',
+        'delete.user',
+       $title = 'Delete',
        $parameters = [
        'id' => $user->id,
 

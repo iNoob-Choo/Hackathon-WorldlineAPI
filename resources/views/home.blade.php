@@ -13,7 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <div class="row">
+                    <div class="row option-list">
                         <ul class="no-bullets">
                           <li><a  class="btn btn-primary btn-block" href="{{route('index.user')}}">View Admins</a></li>
                           <li><a  class="btn btn-primary btn-block " href="{{ route('settings') }}">Settings</a></li>
